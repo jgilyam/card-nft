@@ -23,11 +23,22 @@ body {
   max-width: 300px;
   margin: auto;
   border-radius: 15px;
+  position: relative;
 }
-.card > img {
+.logo {
   width: 100%;
   padding: 10px;
   border-radius: 18px;
+  position: relative;
+  z-index: 1;
+}
+
+.view {
+  position: absolute;
+  left: 116px;
+  top: 116px;
+  visibility: hidden;
+  z-index: 3;
 }
 
 .card .card-info {
@@ -95,4 +106,29 @@ article div img {
 }
 p img {
   width: 100%;
+}
+.card h2:hover,
+.card-creator h3 strong:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+.logo:hover {
+  cursor: pointer;
+}
+.images:hover .view {
+  visibility: visible;
+}
+.images {
+  position: relative;
+}
+.images:hover .background {
+  width: 93%;
+  height: 92%;
+  margin: 10px 10px;
+  border-radius: 8px;
+  background-color: hsl(178, 100%, 50%);
+  opacity: 0.4;
+  position: absolute;
+  z-index: 2;
+  top: -1px;
 }
